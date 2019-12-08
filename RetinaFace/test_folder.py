@@ -9,10 +9,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser("Retinaface Face Detector")
     parser.add_argument("--image_root", type=str, help="Directory containing images")
     parser.add_argument("--res_root", type=str, help="Directory to save visualizations results")
+    parser.add_argument("--model_path", default='./model/R50', type=str, help="path to the pretrained model")
     args = parser.parse_args()
 
     image_root = args.image_root
     res_root = args.res_root
+    model_path = args.model_path
 
     if not os.path.exists(res_root):
         os.makedirs(res_root, exist_ok=True)
@@ -21,9 +23,8 @@ if __name__ == "__main__":
     scales = [1024, 1980]
 
     count = 1
-
     gpuid = 0
-    detector = RetinaFace('./model/R50', 0, gpuid, 'net3')
+    detector = RetinaFace(model_path, 0, gpuid, 'net3')
 
     frames = os.listdir(image_root)
     res = []
