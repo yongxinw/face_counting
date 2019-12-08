@@ -124,7 +124,7 @@ if __name__ == "__main__":
     parser.add_argument("-f", "--retinaface", help="retinaface detection results", type=str)
     parser.add_argument("-i", "--image_root", help="image dir", type=str)
     parser.add_argument("-m", "--model_path", default="/work/yongxinw/InsightFace/",
-                        help="path to pretrained model from insightface", type=str)
+                        help="directory containing the pretrained model from insightface", type=str)
 
     args = parser.parse_args()
 

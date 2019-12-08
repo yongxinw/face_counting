@@ -61,7 +61,7 @@ identity embeddings of the unique faces found as an ```.npz``` file, where the k
     --result_root <directory to save the .npz file> \
     --retinaface <path to .txt file containing the RetinaFace detection> \ 
     --image_root <directory of the images> \
-    --model_path <path to the insightface pretrained model> \
+    --model_path <directory containing the insightface pretrained model> \
     --verbose
     ```
 
