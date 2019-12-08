@@ -56,6 +56,7 @@ identity embeddings of the unique faces found as an ```.npz``` file, where the k
 #### 2.2.2. InsightFace for verification
 - run the following command to count the number of faces under a directory
     ```
+    cd <path_to_this_repo>
     python count_faces.py \
     --result_root <directory to save the .npz file> \
     --retinaface <path to .txt file containing the RetinaFace detection> \ 
